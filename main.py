@@ -10,6 +10,6 @@ def main():
         else:
             messages = build_messages(prompt)
             response = ask_llm(messages)
-            print(response.choices[0].message.content)
+            print(response)
 
 main()

@@ -12,5 +12,5 @@ def ask_llm(messages):
         model = "deepseek/deepseek-chat",
         messages = messages
 ) 
-    return response
+    return response.choices[0].message.content
 
