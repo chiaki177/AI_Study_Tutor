@@ -1,0 +1,9 @@
+Linear Algebra studies vector spaces.
+
+A vector has both magnitude and direction.
+
+Matrices are used to represent linear transformations.
+
+Oxford Mathematics is one of the most challenging mathematics programs.
+
+Ceylon studies Mathematics at Oxford.

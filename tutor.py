@@ -1,11 +1,20 @@
 from llm import ask_llm
 
-def start_chat():
+def load_knowledge():
+    with open("knowledge.txt","r") as file:
+        return file.read()
 
+def start_chat():
+    knowledge = load_knowledge()
     messages = [
     {
         "role":"system",
-        "content":"You are a helpful AI tutor."
+        "content":f"""
+        You are a helpful AI tutor.
+        use the following knowledge:
+        
+        {knowledge}
+"""
     }
 ]
     while True:
