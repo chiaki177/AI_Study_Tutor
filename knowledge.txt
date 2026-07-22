@@ -1,9 +1,11 @@
 Linear Algebra studies vector spaces.
 
-A vector has both magnitude and direction.
+Vectors have magnitude and direction.
 
-Matrices are used to represent linear transformations.
+Matrices represent linear transformations.
 
-Oxford Mathematics is one of the most challenging mathematics programs.
+Python is a programming language.
 
-Ceylon studies Mathematics at Oxford.
+Oxford Mathematics is one of the world's best mathematics programs.
+
+Git is a version control system.

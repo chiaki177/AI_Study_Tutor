@@ -1,24 +1,19 @@
 from llm import ask_llm
-
-def load_knowledge():
-    with open("knowledge.txt","r") as file:
-        return file.read()
+from rag import load_knowledge
+from rag import retrieve
 
 def start_chat():
     knowledge = load_knowledge()
     messages = [
     {
         "role":"system",
-        "content":f"""
-        You are a helpful AI tutor.
-        use the following knowledge:
-        
-        {knowledge}
-"""
+        "content":""
+
     }
 ]
     while True:
         question = input("You: ")
+
         if question.lower() == "quit":
             print("Conversation Summary")
             print("-"*20)
@@ -36,6 +31,17 @@ def start_chat():
                     continue
             break
         else:
+            retrieved_knowledge = retrieve(question,knowledge)
+            messages[0]["content"] = f"""
+You are a helpful AI tutor.
+
+Use the following knowledge:
+
+{retrieved_knowledge}
+
+If the answer is not in the knowledge,
+say that you don't know.
+"""
             messages.append(
         {
             "role":"user",
